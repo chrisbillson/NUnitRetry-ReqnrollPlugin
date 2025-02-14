@@ -1,7 +1,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>NUnitRetry.ReqnrollPlugin</id>
-    <version>1.0.100</version>
+    <version>1.0.200</version>
     <authors>Josh Keegan, Piotr Niedzialek, Chris Billson</authors>
     <owners>Chris Billson</owners>
     <projectUrl>https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin</projectUrl>
@@ -11,7 +11,7 @@
     <tags>Reqnroll NUnit Retry Test-Automation</tags>
 
     <dependencies>
-	    <dependency id="Reqnroll.CustomPlugin" version="2.2.1" />
+	    <dependency id="Reqnroll.CustomPlugin" version="2.3.0" />
 	    <dependency id="SpecFlow.Internal.Json" version="1.0.8" />
     </dependencies>
   </metadata>
