@@ -1,10 +1,10 @@
-using System.Runtime.Serialization;
+//using System.Runtime.Serialization;
 
-namespace NUnitRetry.Tests.JsonConfig
-{
-    public class JsonConfig
-    {
-        [DataMember(Name = "NRetrySettings")]
-        public NRetrySettingsElement NRetrySettings { get; set; }
-    }
-}
+//namespace NUnitRetry.Tests.JsonConfig
+//{
+//    public class JsonConfig
+//    {
+//        [DataMember(Name = "NRetrySettings")]
+//        public NRetrySettingsElement NRetrySettings { get; set; }
+//    }
+//}

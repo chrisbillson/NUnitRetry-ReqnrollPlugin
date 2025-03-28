@@ -1,17 +1,18 @@
 using NUnit.Framework;
 using Reqnroll;
+using NUnitRetry.ReqnrollPlugin.Configuration;
 
 namespace NUnitRetry.Tests.Steps
 {
     [Binding]
     public class RetryTestSteps
     {
-        private readonly Support.Configuration _configuration;
+        private readonly Configuration _configuration;
         private readonly IReqnrollOutputHelper _outputHelper;
 
         public static int RetryCount { get; set; }
 
-        public RetryTestSteps(Support.Configuration configuration, IReqnrollOutputHelper outputHelper)
+        public RetryTestSteps(Configuration configuration, IReqnrollOutputHelper outputHelper)
         {
             _configuration = configuration;
             _outputHelper = outputHelper;
