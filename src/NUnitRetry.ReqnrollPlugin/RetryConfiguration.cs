@@ -1,8 +1,9 @@
+using NUnitRetry.ReqnrollPlugin.JsonConfig;
 using Reqnroll.Configuration;
 using System.IO;
 using System.Text.Json;
 
-namespace NUnitRetry.ReqnrollPlugin.Configuration
+namespace NUnitRetry.ReqnrollPlugin.RetryConfiguration
 {
     // Class which holds configuration from reqnroll.json
     public class RetryConfiguration
@@ -20,29 +21,37 @@ namespace NUnitRetry.ReqnrollPlugin.Configuration
 
         private void LoadConfiguration()
         {
-            string reqnrollJsonFile;
-            if (File.Exists(_reqnrollJsonLocator.GetReqnrollJsonFilePath()))
+            var jsonOptions = new JsonSerializerOptions
             {
-                reqnrollJsonFile = File.ReadAllText(_reqnrollJsonLocator.GetReqnrollJsonFilePath());
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                ReadCommentHandling = JsonCommentHandling.Skip,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var fileName = _reqnrollJsonLocator.GetReqnrollJsonFilePath();
+
+            if (File.Exists(fileName))
+            {
+                var jsonFileContent = File.ReadAllText(fileName);
+
+                using var reqnrollConfigDoc = JsonDocument.Parse(jsonFileContent, new JsonDocumentOptions
+                {
+                    CommentHandling = JsonCommentHandling.Skip
+                });
+
+                if (reqnrollConfigDoc.RootElement.TryGetProperty("NRetrySettings", out JsonElement settings))
+                {
+                    var nRetrySettings = JsonSerializer.Deserialize<NRetrySettingsElement>(settings.GetRawText(), jsonOptions);
+
+                    MaxRetries = nRetrySettings.MaxRetries;
+                    ApplyGlobally = nRetrySettings.ApplyGlobally;
+                }
             }
             else
             {
                 throw new FileNotFoundException("reqnroll.json is missing! Ensure that you've provided the reqnroll.json file to your project and added the correct section. For more info proceed to the projects page: https://github.com/farum12/NUnitRetry.SpecFlowPlugin");
             }
-
-            try
-            {
-                var jsonConfig = JsonSerializer.Deserialize<JsonConfig.JsonConfig>(reqnrollJsonFile);
-
-                MaxRetries = jsonConfig.NRetrySettings.MaxRetries;
-                ApplyGlobally = jsonConfig.NRetrySettings.ApplyGlobally;
-            }
-            catch
-            {
-                // Apply default values if reqnroll.json is present, but section is not added to the JSON.
-                MaxRetries = 3;
-                ApplyGlobally = true;
-            }
         }
     }
+
 }
