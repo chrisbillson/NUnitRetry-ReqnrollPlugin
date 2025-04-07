@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitRetry.ReqnrollPlugin",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitRetry.ReqnrollPlugin.Tests", "NUnitRetry.ReqnrollPlugin.Tests\NUnitRetry.ReqnrollPlugin.Tests.csproj", "{C9CE6311-58BF-2229-3448-03586D043D53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitRetry.ReqnrollPlugin.Configuration", "NUnitRetry.ReqnrollPlugin.Configuration\NUnitRetry.ReqnrollPlugin.Configuration.csproj", "{989898C0-0381-4A49-A1CC-E3CE56E1F5AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{C9CE6311-58BF-2229-3448-03586D043D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9CE6311-58BF-2229-3448-03586D043D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9CE6311-58BF-2229-3448-03586D043D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{989898C0-0381-4A49-A1CC-E3CE56E1F5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{989898C0-0381-4A49-A1CC-E3CE56E1F5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{989898C0-0381-4A49-A1CC-E3CE56E1F5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{989898C0-0381-4A49-A1CC-E3CE56E1F5AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
