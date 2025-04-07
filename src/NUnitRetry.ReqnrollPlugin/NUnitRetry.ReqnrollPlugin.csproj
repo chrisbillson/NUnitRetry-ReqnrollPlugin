@@ -5,6 +5,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<NuspecFile>$(MSBuildThisFileDirectory)NUnitRetry.ReqnrollPlugin.nuspec</NuspecFile>
 		<AssemblyName>NUnitRetry.ReqnrollPlugin</AssemblyName>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>

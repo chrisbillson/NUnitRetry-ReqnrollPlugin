@@ -5,7 +5,6 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using Reqnroll.Generator;
-using NUnitRetry.ReqnrollPlugin.Configuration;
 
 namespace NUnitRetry.ReqnrollPlugin
 {
@@ -13,9 +12,9 @@ namespace NUnitRetry.ReqnrollPlugin
     {
         protected internal const string RETRY_ATTR = "NUnit.Framework.Retry";
 
-        private readonly RetryConfiguration _configuration;
+        private readonly RetryConfiguration.RetryConfiguration _configuration;
 
-        public TestGeneratorProvider(CodeDomHelper codeDomHelper, RetryConfiguration configuration) : base(codeDomHelper)
+        public TestGeneratorProvider(CodeDomHelper codeDomHelper, RetryConfiguration.RetryConfiguration configuration) : base(codeDomHelper)
         {
             _configuration = configuration;
         }
