@@ -8,8 +8,8 @@ namespace NUnitRetry.ReqnrollPlugin.Configuration
     // Class which holds configuration from reqnroll.json
     public class RetryConfiguration
     {
-        public int MaxRetries;
-        public bool ApplyGlobally;
+        public int MaxRetries { get; private set; }
+        public bool ApplyGlobally { get; private set; }
 
         private readonly IReqnrollJsonLocator _reqnrollJsonLocator;
 
