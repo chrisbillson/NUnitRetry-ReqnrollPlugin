@@ -5,7 +5,6 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using Reqnroll.Generator;
-using NUnitRetry.ReqnrollPlugin.Configuration;
 
 namespace NUnitRetry.ReqnrollPlugin
 {

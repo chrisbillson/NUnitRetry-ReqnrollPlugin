@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using NUnitRetry.ReqnrollPlugin.Configuration;
+using NUnitRetry.ReqnrollPlugin;
 using Reqnroll;
 
 namespace NUnitRetry.Tests.Steps

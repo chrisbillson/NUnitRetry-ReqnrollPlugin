@@ -10,8 +10,4 @@
 	<ItemGroup>
 		<PackageReference Include="Reqnroll.CustomPlugin" Version="2.4.0" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\NUnitRetry.ReqnrollPlugin.Configuration\NUnitRetry.ReqnrollPlugin.Configuration.csproj" />
-	</ItemGroup>
 </Project>

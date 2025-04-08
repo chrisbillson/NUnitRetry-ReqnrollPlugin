@@ -1,9 +1,8 @@
-using NUnitRetry.ReqnrollPlugin.JsonConfig;
 using Reqnroll.Configuration;
 using System.IO;
 using System.Text.Json;
 
-namespace NUnitRetry.ReqnrollPlugin.Configuration
+namespace NUnitRetry.ReqnrollPlugin
 {
     // Class which holds configuration from reqnroll.json
     public class RetryConfiguration

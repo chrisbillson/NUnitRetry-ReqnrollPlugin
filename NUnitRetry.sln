@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC838A39-15EB-4A1F-BF26-1298CEC4A744}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.targets = Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitRetry.ReqnrollPlugin", "src\NUnitRetry.ReqnrollPlugin\NUnitRetry.ReqnrollPlugin.csproj", "{297195BD-EA12-B74D-584A-409F4B99423D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitRetry.ReqnrollPlugin.Tests", "tests\NUnitRetry.ReqnrollPlugin.Tests\NUnitRetry.ReqnrollPlugin.Tests.csproj", "{BC479984-1626-0313-CA06-D35E8E1B73E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{297195BD-EA12-B74D-584A-409F4B99423D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297195BD-EA12-B74D-584A-409F4B99423D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297195BD-EA12-B74D-584A-409F4B99423D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297195BD-EA12-B74D-584A-409F4B99423D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC479984-1626-0313-CA06-D35E8E1B73E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC479984-1626-0313-CA06-D35E8E1B73E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC479984-1626-0313-CA06-D35E8E1B73E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC479984-1626-0313-CA06-D35E8E1B73E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30BB6AFC-1DF0-4BA3-A517-28944C8846BF}
+	EndGlobalSection
+EndGlobal
