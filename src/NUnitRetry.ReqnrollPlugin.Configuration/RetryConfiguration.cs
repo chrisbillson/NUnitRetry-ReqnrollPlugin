@@ -8,6 +8,7 @@ namespace NUnitRetry.ReqnrollPlugin.Configuration
     // Class which holds configuration from reqnroll.json
     public class RetryConfiguration
     {
+        private const string RetrySettingsKey = "NRetrySettings";
         public int MaxRetries { get; private set; }
         public bool ApplyGlobally { get; private set; }
 
@@ -21,9 +22,12 @@ namespace NUnitRetry.ReqnrollPlugin.Configuration
 
         private void LoadConfiguration()
         {
+
             var jsonOptions = new JsonSerializerOptions
             {
+                // Camelcase to preserve compatibility.
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                // Reqnroll uses these settings internally, so we should use the same.
                 ReadCommentHandling = JsonCommentHandling.Skip,
                 PropertyNameCaseInsensitive = true
             };
@@ -39,7 +43,7 @@ namespace NUnitRetry.ReqnrollPlugin.Configuration
                     CommentHandling = JsonCommentHandling.Skip
                 });
 
-                if (reqnrollConfigDoc.RootElement.TryGetProperty("NRetrySettings", out JsonElement settings))
+                if (reqnrollConfigDoc.RootElement.TryGetProperty(RetrySettingsKey, out JsonElement settings))
                 {
                     var nRetrySettings = JsonSerializer.Deserialize<NRetrySettingsElement>(settings.GetRawText(), jsonOptions);
 
