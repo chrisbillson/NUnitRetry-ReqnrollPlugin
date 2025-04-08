@@ -21,6 +21,9 @@ jobs:
       with:
         dotnet-version: 8.0.x
       
+    - name: Restore src
+      run: dotnet restore $GITHUB_WORKSPACE/NUnitRetry.sln
+
     - name: Build src
       run: dotnet build $GITHUB_WORKSPACE/src/NUnitRetry.ReqnrollPlugin/NUnitRetry.ReqnrollPlugin.csproj -c Release --no-restore
 
