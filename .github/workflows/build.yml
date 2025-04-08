@@ -22,8 +22,11 @@ jobs:
         dotnet-version: 8.0.x
         
     - name: Restore src dependencies
-      run: dotnet restore $GITHUB_WORKSPACE/src/NUnitRetry.sln
+      run: dotnet restore $GITHUB_WORKSPACE/NUnitRetry.sln
       
     - name: Build src
-      run: dotnet build $GITHUB_WORKSPACE/src/NUnitRetry.sln --no-restore  --configuration release
+      run: dotnet build $GITHUB_WORKSPACE/NUnitRetry.sln --no-restore  --configuration release
+
+    - name: Test
+      run: dotnet test $GITHUB_WORKSPACE/NUnitRetry.sln --no-restore  --configuration release
     
