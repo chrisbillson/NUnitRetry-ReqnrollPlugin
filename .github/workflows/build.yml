@@ -20,10 +20,15 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-        
-    - name: Restore src dependencies
-      run: dotnet restore $GITHUB_WORKSPACE/src/NUnitRetry.sln
       
+    - name: Restore src
+      run: dotnet restore $GITHUB_WORKSPACE/NUnitRetry.sln
+
     - name: Build src
-      run: dotnet build $GITHUB_WORKSPACE/src/NUnitRetry.sln --no-restore  --configuration release
-    
+      run: dotnet build $GITHUB_WORKSPACE/src/NUnitRetry.ReqnrollPlugin/NUnitRetry.ReqnrollPlugin.csproj -c Release --no-restore
+
+    - name: Build test
+      run: dotnet build $GITHUB_WORKSPACE/tests/NUnitRetry.ReqnrollPlugin.Tests/NUnitRetry.ReqnrollPlugin.Tests.csproj -c Release --no-restore
+
+    - name: Test
+      run: dotnet test $GITHUB_WORKSPACE/tests/NUnitRetry.ReqnrollPlugin.Tests/NUnitRetry.ReqnrollPlugin.Tests.csproj -c Release --no-restore

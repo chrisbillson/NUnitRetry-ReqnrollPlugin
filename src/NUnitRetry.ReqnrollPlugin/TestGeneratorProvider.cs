@@ -12,9 +12,9 @@ namespace NUnitRetry.ReqnrollPlugin
     {
         protected internal const string RETRY_ATTR = "NUnit.Framework.Retry";
 
-        private readonly Configuration _configuration;
+        private readonly RetryConfiguration _configuration;
 
-        public TestGeneratorProvider(CodeDomHelper codeDomHelper, Configuration configuration) : base(codeDomHelper)
+        public TestGeneratorProvider(CodeDomHelper codeDomHelper, RetryConfiguration configuration) : base(codeDomHelper)
         {
             _configuration = configuration;
         }
@@ -111,7 +111,7 @@ namespace NUnitRetry.ReqnrollPlugin
         }
 
         /// <summary>
-        /// Apply retry tag, which max retry is based on specflow.json
+        /// Apply retry tag, which max retry is based on reqnroll.json
         /// </summary>
         private void ApplyGlobalRetry(CodeMemberMethod testMethod)
         {

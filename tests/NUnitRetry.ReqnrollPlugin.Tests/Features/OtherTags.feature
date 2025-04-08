@@ -1,6 +1,6 @@
 Feature: OtherTags
 	In order to allow for transient failures
-	As a SpecFlow Generator Plugin Developer
+	As a reqnroll Generator Plugin Developer
 	I want to ensure that other tags won't cause Retry attribute to appear
 
 # Launch with applyGlobally set to true or false

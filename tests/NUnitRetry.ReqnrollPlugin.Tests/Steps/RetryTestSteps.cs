@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using NUnitRetry.ReqnrollPlugin;
 using Reqnroll;
 
 namespace NUnitRetry.Tests.Steps
@@ -6,12 +7,12 @@ namespace NUnitRetry.Tests.Steps
     [Binding]
     public class RetryTestSteps
     {
-        private readonly Support.Configuration _configuration;
+        private readonly RetryConfiguration _configuration;
         private readonly IReqnrollOutputHelper _outputHelper;
 
         public static int RetryCount { get; set; }
 
-        public RetryTestSteps(Support.Configuration configuration, IReqnrollOutputHelper outputHelper)
+        public RetryTestSteps(RetryConfiguration configuration, IReqnrollOutputHelper outputHelper)
         {
             _configuration = configuration;
             _outputHelper = outputHelper;
@@ -31,7 +32,7 @@ namespace NUnitRetry.Tests.Steps
             _outputHelper.WriteLine($"[Retry Count]: {RetryCount}");
         }
         
-        [Then(@"the retry result should be (.*)")]
+        [Then("the retry result should be {int}")]
         public void ThenTheRetryResultShouldBe(int expected)
         {
             Assert.AreEqual(expected, RetryCount);
@@ -47,9 +48,9 @@ namespace NUnitRetry.Tests.Steps
         public void ThenTheRetryResultShouldBeEqualToOneOr()
         {
             if (_configuration.ApplyGlobally)
-                Assert.AreEqual(_configuration.MaxRetries, RetryCount);
+                Assert.That(_configuration.MaxRetries, Is.EqualTo(RetryCount));
             else
-                Assert.AreEqual(1, RetryCount);
+                Assert.That(1, Is.EqualTo(RetryCount));
         }
 
         [When(@"I increment the no retry count")]
