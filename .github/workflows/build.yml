@@ -25,8 +25,11 @@ jobs:
       run: dotnet restore $GITHUB_WORKSPACE/NUnitRetry.sln
       
     - name: Build src
-      run: dotnet build $GITHUB_WORKSPACE/NUnitRetry.sln --no-restore  --configuration release
+      run: dotnet build $GITHUB_WORKSPACE/src/NUnitRetry.ReqnrollPlugin/NUnitRetry.ReqnrollPlugin.csproj --no-restore  --configuration release
+
+    - name: Build test
+      run: dotnet build $GITHUB_WORKSPACE/tests/NUnitRetry.ReqnrollPlugin.Tests/NUnitRetry.ReqnrollPlugin.Tests.csproj --no-restore  --configuration release
 
     - name: Test
-      run: dotnet test $GITHUB_WORKSPACE/NUnitRetry.sln --no-restore  --configuration release
+      run: dotnet test $GITHUB_WORKSPACE/tests/NUnitRetry.ReqnrollPlugin.Tests/NUnitRetry.ReqnrollPlugin.Tests.csproj --no-restore --no-build  --configuration release
     
