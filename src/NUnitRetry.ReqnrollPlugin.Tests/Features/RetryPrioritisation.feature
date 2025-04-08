@@ -1,7 +1,7 @@
-﻿@Retry(4)
+@Retry(4)
 Feature: RetryPrioritisation
 	In order to allow for transient failures
-	As a SpecFlow Generator Plugin Developer
+	As a reqnroll Generator Plugin Developer
 	I want to ensure if global-fetaure-scenario retries are working properly
 
 

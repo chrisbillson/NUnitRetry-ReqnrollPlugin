@@ -4,7 +4,7 @@ using System.IO;
 namespace NUnitRetry.ReqnrollPlugin
 {
     // Don't mind this class; it's for development and debugging purposes only.
-    // Debugging of SpecFlow plugins is kinda pain, thus file with logs comes in handy
+    // Debugging of reqnroll plugins is kinda pain, thus file with logs comes in handy
     public static class Logging
     {
         private static bool logging = false;

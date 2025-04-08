@@ -112,7 +112,7 @@ namespace NUnitRetry.ReqnrollPlugin
         }
 
         /// <summary>
-        /// Apply retry tag, which max retry is based on specflow.json
+        /// Apply retry tag, which max retry is based on reqnroll.json
         /// </summary>
         private void ApplyGlobalRetry(CodeMemberMethod testMethod)
         {

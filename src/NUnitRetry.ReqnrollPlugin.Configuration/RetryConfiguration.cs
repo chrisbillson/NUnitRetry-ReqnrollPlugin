@@ -49,7 +49,7 @@ namespace NUnitRetry.ReqnrollPlugin.Configuration
             }
             else
             {
-                throw new FileNotFoundException("reqnroll.json is missing! Ensure that you've provided the reqnroll.json file to your project and added the correct section. For more info proceed to the projects page: https://github.com/farum12/NUnitRetry.SpecFlowPlugin");
+                throw new FileNotFoundException("reqnroll.json is missing! Ensure that you've provided the reqnroll.json file to your project and added the correct section. For more info proceed to the projects page: https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin");
             }
         }
     }

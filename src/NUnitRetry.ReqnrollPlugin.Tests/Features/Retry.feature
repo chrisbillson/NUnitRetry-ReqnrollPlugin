@@ -1,15 +1,15 @@
 Feature: Retry
 	In order to allow for transient failures
-	As a SpecFlow Generator Plugin Developer
-	I want to ensure that result is based on MaxRetries from specflow.json
+	As a reqnroll Generator Plugin Developer
+	I want to ensure that result is based on MaxRetries from reqnroll.json
 
 @Retry
-Scenario: Retry tag works and amount of Retries equals to MaxRetries from specflow.json
+Scenario: Retry tag works and amount of Retries equals to MaxRetries from reqnroll.json
 	When I increment the default retry count
 	Then the retry result should be equal to config
 
 @retry
-Scenario: Retry tag works as lowercase and amount of Retries equals to MaxRetries from specflow.json
+Scenario: Retry tag works as lowercase and amount of Retries equals to MaxRetries from reqnroll.json
 	When I increment the default retry count
 	Then the retry result should be equal to config
 
@@ -24,12 +24,12 @@ Scenario: Retry tag as lowercase works with parameter
 	Then the retry result should be 5
 
 #scenario is based on ApplyGlobbaly; if it will be false - this test should pass, as the amount of retries should equal to 1
-Scenario: Global setting of ApplyGlobally works properly and amount of Retries equals to MaxRetries from specflow.json
+Scenario: Global setting of ApplyGlobally works properly and amount of Retries equals to MaxRetries from reqnroll.json
 	When I increment the default retry count
 	Then the retry result should be equal to 1 or to config value
 
 @Retry
-Scenario Outline: Scenario outline works properly with Retry tag and amount of Retries equals to MaxRetries from specflow.json
+Scenario Outline: Scenario outline works properly with Retry tag and amount of Retries equals to MaxRetries from reqnroll.json
 	When I increment the default retry count
 	Then the retry result should be equal to config
 
