@@ -2,12 +2,13 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<NuspecFile>$(MSBuildThisFileDirectory)NUnitRetry.ReqnrollPlugin.nuspec</NuspecFile>
+		<NuspecProperties>version=$(PackageVersion)</NuspecProperties>
 		<AssemblyName>NUnitRetry.ReqnrollPlugin</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Reqnroll.CustomPlugin" Version="2.4.0" />
 	</ItemGroup>
+	
 </Project>
