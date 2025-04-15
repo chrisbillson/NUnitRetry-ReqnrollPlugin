@@ -1,3 +1,5 @@
+[![CI](https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin/actions/workflows/build.yml)
+
 # NUnitRetry.ReqnrollPlugin
 ## About
 
