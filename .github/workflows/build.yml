@@ -52,7 +52,8 @@ jobs:
       run: |
         dotnet pack $GITHUB_WORKSPACE/src/NUnitRetry.ReqnrollPlugin/NUnitRetry.ReqnrollPlugin.csproj \
         -c Release \
-        -p:PackageVersion=$VERSION \
+        -p:version=$VERSION \
+        -p:NuspecFile=NUnitRetry.ReqnrollPlugin.nuspec \
         --no-build
       
     - name: Publish

@@ -4,9 +4,8 @@
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<NuspecFile>$(MSBuildThisFileDirectory)NUnitRetry.ReqnrollPlugin.nuspec</NuspecFile>
-		<AssemblyName>NUnitRetry.ReqnrollPlugin</AssemblyName>
-		<NuspecFile>NUnitRetry.ReqnrollPlugin.nuspec</NuspecFile>
 		<NuspecProperties>version=$(PackageVersion)</NuspecProperties>
+		<AssemblyName>NUnitRetry.ReqnrollPlugin</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
