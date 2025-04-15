@@ -27,10 +27,10 @@ jobs:
       id: set-version
       run: |
         if [[ "${{ github.ref_type }}" == "tag" ]]; then
-          echo "VERSION=${{ github.ref_name }}" >> $GITHUB_ENV
+          echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_ENV
         else
           LATEST_TAG=$(git describe --tags --abbrev=0)
-          echo "VERSION=${LATEST_TAG}-preview" >> $GITHUB_ENV
+          echo "VERSION=${LATEST_TAG#v}-preview" >> $GITHUB_ENV
         fi
 
     - name: Restore src
@@ -54,7 +54,6 @@ jobs:
         --no-build
       
     - name: Publish
-      if: ${{ github.ref_type == 'tag' }}
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
       run: |
