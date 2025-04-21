@@ -36,6 +36,9 @@ jobs:
           echo "VERSION=${LATEST_TAG#v}-preview-${{ github.run_number }}" >> $GITHUB_ENV
         fi
 
+    - name: Lint src
+      run: dotnet format $GITHUB_WORKSPACE/NUnitRetry.sln --verify-no-changes
+
     - name: Restore src
       run: dotnet restore $GITHUB_WORKSPACE/NUnitRetry.sln
 

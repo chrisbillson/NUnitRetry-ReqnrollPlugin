@@ -24,14 +24,14 @@ namespace NUnitRetry.Tests.Steps
             RetryCount++;
             _outputHelper.WriteLine($"[Retry Count]: {RetryCount}");
         }
-        
+
         [When(@"I increment the retry count")]
         public void WhenIIncrementTheRetryCount()
         {
             RetryCount++;
             _outputHelper.WriteLine($"[Retry Count]: {RetryCount}");
         }
-        
+
         [Then("the retry result should be {int}")]
         public void ThenTheRetryResultShouldBe(int expected)
         {
@@ -56,7 +56,7 @@ namespace NUnitRetry.Tests.Steps
         [When(@"I increment the no retry count")]
         public void WhenIIncrementTheNoRetryCount()
         {
-            
+
         }
 
     }
