@@ -12,7 +12,7 @@ namespace NUnitRetry.ReqnrollPlugin
 
         public static void WriteLine(string methodName, string message)
         {
-                        if (logging)
+            if (logging)
             {
                 using (StreamWriter sw = File.AppendText(path))
                 {
