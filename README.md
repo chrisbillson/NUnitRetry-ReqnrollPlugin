@@ -1,4 +1,6 @@
 [![CI](https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin/actions/workflows/build.yml)
+![NuGet](https://img.shields.io/nuget/v/NUnitRetry.ReqnrollPlugin.svg)
+![NuGet Downloads](https://img.shields.io/nuget/dt/NUnitRetry.ReqnrollPlugin.svg)
 
 # NUnitRetry.ReqnrollPlugin
 ## About
@@ -15,7 +17,7 @@ NUnitRetry Reqnroll Plugin is the newest approach to adding "Nunit.Framework.Ret
 ## "Why should I use that?"
 
 Flaky tests. 
-This plugin is here to help you with tests,  which's reason for failure is an external dependency and the failure is transient, e.g:
+This plugin is here to help you with tests which occasionally fail due to transient issues which are outside your control, e.g:
  - HTTP request over the network
  - Database call that could deadlock, timeout etc...
  - random UI behaviors
@@ -93,15 +95,13 @@ You can optionally specify a number of times to attempt to run the test in brack
 Feel free to open a pull request! If you want to start any sizeable chunk of work, consider 
 opening an issue first to discuss, and make sure nobody else is working on the same problem.  
 
-## Installation - dev state
+## Development
 
-As this plugin is currently in development state, the installation requires you to follow this steps:
 1. Download the repo.
-2. Open NUnitRetryReqnroll in VS.
-3. Publish it somewhere locally as a NuGet package.
-4. Include the NuGet package to target project from your local directory ( https://stackoverflow.com/questions/10240029/how-do-i-install-a-nuget-package-nupkg-file-locally ).
-
-Example usage is presented in included **NunitRetryReqnrollTests**. 
+2. Open `NUnitRetry.sln` in VS.
+3. Make any changes to the plugin in the `NUnitRetry.ReqnrollPlugin` project
+4. Build and test your changes via the `NUnitRetry.ReqnrollPlugin.Tests` project (this is configured to pickup the latest version of the plugin built from local source).
+5. That's it!
 
 ## Roadmap
 
