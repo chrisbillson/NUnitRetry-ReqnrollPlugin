@@ -1,9 +1,7 @@
-name: Snyk Scan
+name: Snyk Vulnerability Scan
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 jobs:
