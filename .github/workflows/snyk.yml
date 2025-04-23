@@ -1,4 +1,4 @@
-name: Snyk Scan
+name: Snyk Vulnerability Scan
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Run Snyk
         uses: snyk/actions/dotnet@master
+        with:
+          args: --file=$GITHUB_WORKSPACE/NUnitRetry.sln
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: test
