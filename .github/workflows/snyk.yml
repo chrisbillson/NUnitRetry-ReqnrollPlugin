@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -19,7 +19,7 @@ jobs:
         run: dotnet restore $GITHUB_WORKSPACE/NUnitRetry.sln
 
       - name: Run Snyk
-        uses: snyk/actions/dotnet@v1
+        uses: snyk/actions/dotnet@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
