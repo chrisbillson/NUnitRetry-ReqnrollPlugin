@@ -1,6 +1,6 @@
-[![CI](https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/chrisbillson/NUnitRetry.ReqnrollPlugin/actions/workflows/build.yml)
-![NuGet](https://img.shields.io/nuget/v/NUnitRetry.ReqnrollPlugin.svg)
-![NuGet Downloads](https://img.shields.io/nuget/dt/NUnitRetry.ReqnrollPlugin.svg)
+[![CI](https://github.com/chrisbillson/NUnitRetry-ReqnrollPlugin/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/chrisbillson/NUnitRetry-ReqnrollPlugin/actions/workflows/build.yml)
+[![NuGet](https://img.shields.io/nuget/v/NUnitRetry.ReqnrollPlugin.svg)](https://www.nuget.org/packages/NUnitRetry.ReqnrollPlugin)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/NUnitRetry.ReqnrollPlugin.svg)](https://www.nuget.org/packages/NUnitRetry.ReqnrollPlugin)
 
 # NUnitRetry.ReqnrollPlugin
 ## About
