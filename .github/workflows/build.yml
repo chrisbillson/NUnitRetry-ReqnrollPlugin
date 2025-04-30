@@ -36,11 +36,11 @@ jobs:
           echo "VERSION=${LATEST_TAG#v}-preview-${{ github.run_number }}" >> $GITHUB_ENV
         fi
 
-    - name: Lint src
-      run: dotnet format $GITHUB_WORKSPACE/NUnitRetry.sln --verify-no-changes
-
     - name: Restore src
       run: dotnet restore $GITHUB_WORKSPACE/NUnitRetry.sln
+
+    - name: Lint src
+      run: dotnet format $GITHUB_WORKSPACE/NUnitRetry.sln --verify-no-changes --no-restore
 
     - name: Build src
       run: dotnet build $GITHUB_WORKSPACE/src/NUnitRetry.ReqnrollPlugin/NUnitRetry.ReqnrollPlugin.csproj -c Release --no-restore -p:PackageVersion=${{ env.VERSION }}
