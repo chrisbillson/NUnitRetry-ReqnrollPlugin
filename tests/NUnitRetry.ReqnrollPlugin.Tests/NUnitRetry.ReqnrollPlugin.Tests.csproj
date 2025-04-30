@@ -8,11 +8,11 @@
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
         <PackageReference Include="NUnit" Version="3.13.2" />
         <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
-        <PackageReference Include="Reqnroll.NUnit" Version="2.4.0" />
+        <PackageReference Include="Reqnroll.NUnit" Version="2.4.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ReqnrollGeneratorPlugins Include="../../src/NUnitRetry.ReqnrollPlugin/bin/Release/netstandard2.0/NUnitRetry.ReqnrollPlugin.dll" />
+		<ReqnrollGeneratorPlugins Include="../../src/NUnitRetry.ReqnrollPlugin/bin/$(Configuration)/netstandard2.0/NUnitRetry.ReqnrollPlugin.dll" />
 	</ItemGroup>
 
 	<ItemGroup>
