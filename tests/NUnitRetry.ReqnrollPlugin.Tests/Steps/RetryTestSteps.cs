@@ -47,8 +47,8 @@ namespace NUnitRetry.Tests.Steps
         [Then(@"the retry result should be equal to 1 or to config value")]
         public void ThenTheRetryResultShouldBeEqualToOneOr()
         {
-                if (_configuration.ApplyGlobally)
-                    Assert.That(RetryCount, Is.EqualTo(_configuration.MaxRetries));
+            if (_configuration.ApplyGlobally)
+                Assert.That(RetryCount, Is.EqualTo(_configuration.MaxRetries));
             else
                 Assert.That(1, Is.EqualTo(RetryCount));
         }
