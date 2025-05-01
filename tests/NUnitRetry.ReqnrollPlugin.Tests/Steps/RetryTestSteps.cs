@@ -35,20 +35,20 @@ namespace NUnitRetry.Tests.Steps
         [Then("the retry result should be {int}")]
         public void ThenTheRetryResultShouldBe(int expected)
         {
-            Assert.AreEqual(expected, RetryCount);
+            Assert.That(RetryCount, Is.EqualTo(expected));
         }
 
         [Then(@"the retry result should be equal to config")]
         public void ThenTheRetryResultShouldBeEqualToConfig()
         {
-            Assert.AreEqual(_configuration.MaxRetries, RetryCount);
+            Assert.That(RetryCount, Is.EqualTo(_configuration.MaxRetries));
         }
 
         [Then(@"the retry result should be equal to 1 or to config value")]
         public void ThenTheRetryResultShouldBeEqualToOneOr()
         {
             if (_configuration.ApplyGlobally)
-                Assert.That(_configuration.MaxRetries, Is.EqualTo(RetryCount));
+                Assert.That(RetryCount, Is.EqualTo(_configuration.MaxRetries));
             else
                 Assert.That(1, Is.EqualTo(RetryCount));
         }
