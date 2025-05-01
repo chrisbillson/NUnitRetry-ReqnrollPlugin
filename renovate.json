@@ -19,5 +19,11 @@
         "datasourceTemplate": "nuget",
         "versioningTemplate": "nuget"
       }
-    ]
+    ],
+    "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
 }
