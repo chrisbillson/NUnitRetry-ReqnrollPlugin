@@ -28,7 +28,7 @@ If you have a test that covers some flaky code, where sporadic failures are caus
 
 ## Installation 
 1. Include the NuGet package (https://www.nuget.org/packages/NUnitRetry.ReqnrollPlugin/) to target project.
-2. Add reqnroll.json to your project **(NOTE: Without reqnroll.json exception will be thrown, an info will be outputed to console)**.
+2. Add reqnroll.json to your project **(NOTE: Without reqnroll.json an exception will be thrown during test startup)**.
 3. Include following section to reqnroll.json:
 ```json
 "NRetrySettings": {
@@ -36,8 +36,8 @@ If you have a test that covers some flaky code, where sporadic failures are caus
     "applyGlobally": true
   }
 ```
-4. Modify maxRetries value - it sets default amout of max retries, which are applied when `@Retry` tag is used.
-5. Modify applyGlobally value - it sets whether test methods generated from Features/Scenarios without tag should also obtain "Nunit.Framework.Retry(maxRetries)" attribute.
+4. Modify maxRetries value - it sets default amount of max retries, which are applied when `@Retry` tag is used.
+5. Modify applyGlobally value - it sets whether test methods generated from Features/Scenarios without a tag should also obtain "Nunit.Framework.Retry(maxRetries)" attribute.
 
 ## Usage
 
@@ -64,7 +64,7 @@ Scenario: Retry scenario five times
 All options that can be used against an individual scenario can also be applied like this at the feature level.  
 If a `@Retry` tag exists on both the feature and a scenario within that feature, the tag on the scenario will take
 precedent over the one on the feature. This is useful if you wanted all scenarios in a feature to be retried 
-by default but for some cases also wanted to wait some time before each retry attempt. You can also use this to prevent a specific scenario not be retried, even though it is within a feature with a `@Retry` tag, by adding `@Retry(1)` to the scenario.
+by default but for some cases also wanted to wait some time before each retry attempt. You can also use this to prevent a specific scenario from being retried, even though it is within a feature with a `@Retry` tag, by adding `@Retry(1)` to the scenario.
 
 ### Scenarios (and outlines)
 Above any scenario or scenario outline that should be retried, add a `@retry` tag, e.g:
@@ -87,8 +87,6 @@ Scenario: Retry scenario five times
 ```
 This will attempt to run the test until it passes, up to 3 times by default (or else, as its based on config located in reqnroll.json). 
 You can optionally specify a number of times to attempt to run the test in brackets, e.g. `@Retry(5)`.  
-
-
 
 
 ## Contributing
