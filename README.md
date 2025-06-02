@@ -36,8 +36,8 @@ If you have a test that covers some flaky code, where sporadic failures are caus
     "applyGlobally": true
   }
 ```
-1. Modify maxRetries value - it sets default amount of max retries, which are applied when `@Retry` tag is used.
-2. Modify applyGlobally value - it sets whether test methods generated from Features/Scenarios without a tag should also obtain "Nunit.Framework.Retry(maxRetries)" attribute.
+4. Modify maxRetries value - it sets default amount of max retries, which are applied when `@Retry` tag is used.
+5. Modify applyGlobally value - it sets whether test methods generated from Features/Scenarios without a tag should also obtain "Nunit.Framework.Retry(maxRetries)" attribute.
 
 ## Usage
 
